@@ -13,7 +13,8 @@ export const initialStore=()=>{
         background: null,
       }
     ],
-    characters: []
+    characters: [],
+    favorites: [],
   }
 }
 
@@ -33,6 +34,19 @@ export default function storeReducer(store, action = {}) {
       return {
         ...store,
         characters: action.payload
+      };
+    case 'toggle_favorites':
+      let favs = store.favorites
+
+       if (favs.includes(action.payload)) {
+           favs = favs.filter((fav, index) =>  fav.name !== action.pauload)
+       }
+       else {
+        favs= [...favs, action.payload]
+       }
+       return {
+        ...store,
+        favorites: favs
       };
     default:
       throw Error('Unknown action.');

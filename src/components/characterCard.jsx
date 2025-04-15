@@ -6,9 +6,11 @@ export const CharacterCard = (props) => {
   const { store, dispatch } = useGlobalReducer()
 
   const handleFavs = () => {
-    dispatch({type:toggle_favorites, payload: props.name})
+    dispatch({type:"toggle_favorites", payload: props.name})
 
   }
+  
+  
 
   return (
     <div className="text-center mt-5">

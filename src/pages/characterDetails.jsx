@@ -17,9 +17,14 @@ export const CharacterDetails = () => {
     setCharacter(data.result.properties);
 
   }
-
+ 
+ 
+ 
   return (
     <div className="text-center mt-5">
+
+    { character && character.name && (
+      <>
       <h1>Name:</h1>
       <h3>{character.name}</h3>
       
@@ -29,7 +34,8 @@ export const CharacterDetails = () => {
 
       <h1>Birth Year</h1>
       <h3>{character.birth_year}</h3>
-
+      </>
+    )}
     </div>
   );
 }; 

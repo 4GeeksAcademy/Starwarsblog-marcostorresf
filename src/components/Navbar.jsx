@@ -15,24 +15,24 @@ export const Navbar = () => {
 				</Link>
 				<div className="ml-auto">
 					<Link to="/">
-					<div class="dropdown">
-						<button className="btn btn-dark btn-lg dropdown-toggle dropdown-menu-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-							FAVORITES
-						</button>
-						<ul className="dropdown-menu">
+						<div className="dropdown">
+							<button className="btn btn-dark btn-lg dropdown-toggle dropdown-menu-right" type="button" data-bs-toggle="dropdown">
+								FAVORITES
+							</button>
+							<ul className="dropdown-menu">
 
-							{store.favorites.length > 0 ? store.favorites.map((favorite, index) => (
-								<li key={index}>
-									{favorite}
-								</li>
-							))
-								: <li>add a favorite</li>}
-						</ul>
-                     </div>
+								{store.favorites.length > 0 ? store.favorites.map((favorite, index) => (
+									<li key={index}>
+										{favorite}
+									</li>
+								))
+									: <li>add a favorite</li>}
+							</ul>
+						</div>
 					</Link>
 				</div>
 			</div>
-			
+
 		</nav>
 	);
 };

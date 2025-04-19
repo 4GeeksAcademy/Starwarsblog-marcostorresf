@@ -14,6 +14,8 @@ export const initialStore=()=>{
       }
     ],
     characters: [],
+    planets: [],
+    starships: [],
     favorites: [],
   }
 }
@@ -34,7 +36,25 @@ export default function storeReducer(store, action = {}) {
       return {
         ...store,
         characters: action.payload
+        
       };
+    case 'add_planet':
+
+
+      return {
+        ...store,
+        planets: action.payload
+        
+      };
+    case 'add_starship':
+
+
+      return {
+        ...store,
+        starships: action.payload
+        
+      };
+
     case 'toggle_favorites':
       let favs = store.favorites
 

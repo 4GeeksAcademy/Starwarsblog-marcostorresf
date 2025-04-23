@@ -4,6 +4,7 @@ import storeReducer from "../store";
 
 export const Navbar = () => {
 	const { store, dispatch } = useGlobalReducer()
+	
 
 
 	return (
@@ -24,6 +25,7 @@ export const Navbar = () => {
 								{store.favorites.length > 0 ? store.favorites.map((favorite, index) => (
 									<li key={index}>
 										{favorite}
+									
 									</li>
 								))
 									: <li>add a favorite</li>}

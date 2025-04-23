@@ -59,7 +59,7 @@ export default function storeReducer(store, action = {}) {
       let favs = store.favorites
 
        if (favs.includes(action.payload)) {
-           favs = favs.filter((fav, index) =>  fav.name !== action.pauload)
+           favs = favs.filter((fav, index) =>  fav !== action.payload)
        }
        else {
         favs= [...favs, action.payload]
